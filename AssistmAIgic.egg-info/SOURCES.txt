@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+AssistmAIgic.egg-info/PKG-INFO
+AssistmAIgic.egg-info/SOURCES.txt
+AssistmAIgic.egg-info/dependency_links.txt
+AssistmAIgic.egg-info/requires.txt
+AssistmAIgic.egg-info/top_level.txt

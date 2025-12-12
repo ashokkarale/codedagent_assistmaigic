@@ -1,0 +1,272 @@
+{
+    "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+    "$id": "entry-points.json",
+    "entryPoints": [
+        {
+            "filePath": "agent",
+            "uniqueId": "d17df4ac-9453-4ca4-acba-d17af6e8852e",
+            "type": "agent",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "message_id": {
+                        "type": "string"
+                    },
+                    "agent_language": {
+                        "type": "string"
+                    },
+                    "email_body": {
+                        "type": "string"
+                    },
+                    "email_subject": {
+                        "type": "string"
+                    },
+                    "translated_email_body": {
+                        "type": "string"
+                    },
+                    "translated_email_subject": {
+                        "type": "string"
+                    },
+                    "mail_communication_language": {
+                        "type": "string"
+                    },
+                    "order_id": {
+                        "type": "string"
+                    },
+                    "order_details": {
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "email_sentiment": {
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "isorder_valid": {
+                        "type": "boolean"
+                    },
+                    "email_category": {
+                        "type": "string"
+                    },
+                    "email_response": {
+                        "type": "string"
+                    },
+                    "hitl_response": {
+                        "type": "string"
+                    },
+                    "final_status": {
+                        "type": "string"
+                    }
+                },
+                "required": []
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "message_id": {
+                        "type": "string"
+                    },
+                    "agent_language": {
+                        "type": "string"
+                    },
+                    "email_body": {
+                        "type": "string"
+                    },
+                    "email_subject": {
+                        "type": "string"
+                    },
+                    "translated_email_body": {
+                        "type": "string"
+                    },
+                    "translated_email_subject": {
+                        "type": "string"
+                    },
+                    "mail_communication_language": {
+                        "type": "string"
+                    },
+                    "order_id": {
+                        "type": "string"
+                    },
+                    "order_details": {
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "email_sentiment": {
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "isorder_valid": {
+                        "type": "boolean"
+                    },
+                    "email_category": {
+                        "type": "string"
+                    },
+                    "email_response": {
+                        "type": "string"
+                    },
+                    "hitl_response": {
+                        "type": "string"
+                    },
+                    "final_status": {
+                        "type": "string"
+                    }
+                },
+                "required": []
+            },
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "__start__",
+                        "name": "__start__",
+                        "type": "__start__",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "translate_email_language",
+                        "name": "translate_email_language",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "extract_order_id",
+                        "name": "extract_order_id",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "get_order_details",
+                        "name": "get_order_details",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "auto_reject",
+                        "name": "auto_reject",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "categorize_email",
+                        "name": "categorize_email",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "analyze_email_sentiment",
+                        "name": "analyze_email_sentiment",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "get_answer_to_query",
+                        "name": "get_answer_to_query",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "human_review",
+                        "name": "human_review",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "reply_to_email",
+                        "name": "reply_to_email",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "step_end",
+                        "name": "step_end",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "__end__",
+                        "name": "__end__",
+                        "type": "__end__",
+                        "subgraph": null,
+                        "metadata": {}
+                    }
+                ],
+                "edges": [
+                    {
+                        "source": "__start__",
+                        "target": "translate_email_language",
+                        "label": null
+                    },
+                    {
+                        "source": "analyze_email_sentiment",
+                        "target": "get_answer_to_query",
+                        "label": null
+                    },
+                    {
+                        "source": "auto_reject",
+                        "target": "step_end",
+                        "label": null
+                    },
+                    {
+                        "source": "categorize_email",
+                        "target": "analyze_email_sentiment",
+                        "label": null
+                    },
+                    {
+                        "source": "extract_order_id",
+                        "target": "auto_reject",
+                        "label": "order_id_missing"
+                    },
+                    {
+                        "source": "extract_order_id",
+                        "target": "get_order_details",
+                        "label": "order_id_available"
+                    },
+                    {
+                        "source": "get_answer_to_query",
+                        "target": "human_review",
+                        "label": "very_negative_sentiment"
+                    },
+                    {
+                        "source": "get_answer_to_query",
+                        "target": "reply_to_email",
+                        "label": "agent_can_proceed_sentiment"
+                    },
+                    {
+                        "source": "get_order_details",
+                        "target": "categorize_email",
+                        "label": null
+                    },
+                    {
+                        "source": "human_review",
+                        "target": "reply_to_email",
+                        "label": null
+                    },
+                    {
+                        "source": "reply_to_email",
+                        "target": "step_end",
+                        "label": null
+                    },
+                    {
+                        "source": "translate_email_language",
+                        "target": "extract_order_id",
+                        "label": null
+                    },
+                    {
+                        "source": "step_end",
+                        "target": "__end__",
+                        "label": null
+                    }
+                ]
+            }
+        }
+    ]
+}

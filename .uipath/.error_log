@@ -1,0 +1,28 @@
+
+--- Authentication Error Log 2025-10-22 09:17:05 ---
+[
+  {
+    "timestamp": "2025-10-22T03:47:04.374Z",
+    "message": "Authentication started",
+    "params": {
+      "code": "e29990c9-2a9c-471a-ba2a-2e87251686a0.767C329D7E51FC90550A5C4BE91DE054210D4D169185B0B53DF6824938046BC7",
+      "scope": "offline_access ProcessMining OrchestratorApiUserAccess StudioWebBackend IdentityServerApi ConnectionService DataService DocumentUnderstanding Du.Digitization.Api Du.Classification.Api Du.Extraction.Api Du.Validation.Api EnterpriseContextService Directory JamJamApi LLMGateway LLMOps OMS RCS.FolderAuthorization TM.Projects TM.TestCases TM.Requirements TM.TestSets",
+      "state": "71vBDyk6ouvTJIcGBLUaF6ZBFG5pVu29IjeQc0EcXuE",
+      "iss": "https://cloud.uipath.com/identity_"
+    }
+  }
+]
+
+--- Authentication Error Log 2025-12-12 23:54:18 ---
+[
+  {
+    "timestamp": "2025-12-12T18:24:17.373Z",
+    "message": "Authentication started",
+    "params": {
+      "code": "e29990c9-2a9c-471a-ba2a-2e87251686a0.D925B54E7952983B44502AEFD71AF6EF6F3426EDB00B069F85247AF640428210",
+      "scope": "offline_access ProcessMining OrchestratorApiUserAccess StudioWebBackend IdentityServerApi ConnectionService DataService DocumentUnderstanding Du.Digitization.Api Du.Classification.Api Du.Extraction.Api Du.Validation.Api EnterpriseContextService Directory JamJamApi LLMGateway LLMOps OMS RCS.FolderAuthorization TM.Projects TM.TestCases TM.Requirements TM.TestSets",
+      "state": "gHds1euCEWHVr_E9pRcuHX8UJOr27IautmnC0i0GvFc",
+      "iss": "https://cloud.uipath.com/identity_"
+    }
+  }
+]

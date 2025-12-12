@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: AssistmAIgic
+Version: 0.0.5
+Summary: AssistmAIgic is an AI-powered agent that automates customer support by handling queries received via email. It can understand and process emails, extract relevant information like order IDs, retrieve order details, categorize emails, analyze sentiment, and generate responses using a knowledge base. It also supports multilingual communication and can escalate complex cases to human agents.
+Author-email: Ashok Karale <karaleashoks@gmail.com>
+Requires-Python: >=3.11
+Requires-Dist: uipath-langchain<0.2.0,>=0.1.0
+Requires-Dist: langchain-anthropic>=0.3.8
+Requires-Dist: langchain-mcp-adapters>=0.1.11
+Requires-Dist: langgraph>=1.0.0
